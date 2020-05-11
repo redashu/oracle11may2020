@@ -1,0 +1,128 @@
+To install docker in linux based Os  : OL , rhel , centos , fedora
+---------
+
+yum install docker 
+systemctl  start  docker
+systemctl   enable  docker  #  autostart after  reboot of os
+
+@@@@@@@@@@@@@@@@@@@
+   THis is for  your local setup after this training if u want to do practise 
+@@@@@
+# Windows 10  (Enterprise OR prefessional) and  same for MAc 
+:  Docker desktop 
+--------------
+Note:  Docker desktop will use  Vmware / vbox / hyperV  to install docker 
+Links : for Docker Desktop Download 
+-----------
+https://hub.docker.com/editions/community/docker-ce-desktop-windows/
+https://hub.docker.com/editions/community/docker-ce-desktop-mac
+
+#########  DOcker  basic  OPerations ###########
+1. to creata a new container 
+--
+docker run  --name ashuc1  alpine  ping fb.com
+
+2. remove a non running  container 
+---
+docker rm  <name|id of container>
+
+3.  create container and put output in background of parent process 
+--
+ docker  run  --name  ashuc1  -d   alpine  ping  google.com 
+
+4.  to check ouptut of parent process 
+--
+docker  logs  ashuc1
+
+5. to stop a running  container gracefully
+---
+ docker   stop   ashuc1  --- / docker kill  ashuc1  (forcefully kill)
+
+6.  to start  a stopped container  
+---
+ docker   start   ashuc1
+
+7.  To kill all running contaienrs
+--
+docker  kill  $(docker ps  -q)
+
+
+8.  To start all  contaienrs
+--
+docker  start  $(docker ps  -aq)
+
+9.  to remove all the containers
+---
+docker  rm  $(docker ps  -aq)
+
+
+10. to dump internals of docker image
+--
+docker  inspect  imagename 
+
+#########  Dockerfile  #######
+example 1:-
+-----
+FROM  alpine
+MAINTAINER  ashutoshh@linux.com , 9509957594
+CMD  ping  fb.com
+
+----------
+To build  a new docker image;
+====
+docker  build  -t   <repo>:<tag>   .(location of Dockerfile)
+--
+docker  build  -t   alpine:ashutoshh   .
+
+####### example 2  dockerfile  with python code
+---
+FROM python
+MAINTAINER  ashutoshh@linux.com
+RUN  mkdir  /mycode
+#  it will create a directory inside docker image
+COPY   hello.py   /mycode/hello.py
+#    base location of  main system   to  docker  images
+#  copy will only  take current working directory
+CMD  python  /mycode/hello.py
+
+------
+@@ Github URL:--https://github.com/redashu/oracle11may2020
+---
+example 3:  httpd install using  dockerfile
+====
+FROM  oraclelinux
+MAINTAINER  ashutoshh@linux.com
+RUN  yum   install   httpd  -y
+# we are  install  most  stable  httpd  version  on oraclelinux
+COPY  webapp  /var/www/html/
+#  we  are copying  all the content from host machine to docker image
+#   /var/www/html is  the  documentroot  of  webserver httpd
+EXPOSE  80
+# this is default port number of  httpd  server
+CMD  /usr/sbin/httpd  -DFOREGROUND
+
+#   start  web server  without  systemctl
+
+------------
+##########  docker image  push to Docker hub #######
+----
+127  docker  tag   ec9dbe5ba2a6    dockerashu/httpd:oraclelinux
+  128  docker  images   |  grep -i ashu
+  129  docker  login
+  130  docker  push   dockerashu/httpd:oraclelinux
+  131  docker logout
+-----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
