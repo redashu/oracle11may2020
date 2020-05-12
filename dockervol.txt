@@ -1,0 +1,10 @@
+  868  docker  volume  create  ashuvol 
+  870  docker  volume  inspect  ashuvol1
+  871  docker  volume  inspect  ashuvol
+  874  docker  run  -it  --name ashuc9  -v  ashuvol:/mnt/ok   alpine  sh 
+  876  docker  run  --rm -it  -v  ashuvol:/mnt/ok   oraclelinux  bash 
+  881  docker  run  -it --name oknew  -v  ashuvol:/data  alpine sh 
+  882  docker  run  -it --name  fine  -v  ashuvol:/cool  alpine sh 
+  884  docker  run  -it --name  okgoogle  -v  ashuvol:/wow:ro   alpine sh 
+  967  history    |   grep -i ashuvol
+  968  history    |   grep -i ashuvol  >dockervol.txt

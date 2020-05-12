@@ -1,0 +1,22 @@
+  764  docker  network   ls
+  765  docker  network  inspect  bridge 
+  766  docker  network  inspect  bridge    |  less
+  767  docker  network  inspect  bridge    |  grep -i name
+  768  docker  network  ls
+  771  docker  network  inspect  bridge    |  grep -i name
+  772  docker  network  inspect  bridge    
+  774  docker  run  -d  --name  ashuc11  --network host  alpine ping fb.com 
+  776  docker network ls
+  785  docker  network ls
+  786  docker  run  -it --rm  --network none  alpine sh 
+  788  docker network  ls
+  807  docker  network  ls
+  808  docker  network  create  ashubr1  --subnet  172.18.0.0/16  
+  809  docker  network  ls
+  811  docker  run  -itd  --name ashucx1  --network ashubr1  --ip 172.18.0.100  alpine ping fb.com 
+  828  docker network  ls
+  829  docker  network  rm   ashubr1
+  830  docker  network  rm   $(docker  network  ls  -q)
+  831  docker network  ls
+  833  history |   grep -i net  
+  834  history |   grep -i net    >dockernetwork.txt

@@ -1,0 +1,92 @@
+   23  docker  search   ashutoshh
+   58  docker  run  --name  ashuc1  alpine  ping  google.com 
+   61  docker  run  --name  ashuc1  alpine  ping  google.com 
+   62  docker  rm   ashuc1  
+   63  docker  run  --name  ashuc1  -d   alpine  ping  google.com  
+   70  docker  logs  ashuc1  
+   72  docker  logs -f   ashuc1  
+   80  docker   stop   ashuc1  
+   83  docker  start  ashuc1 
+   87  docker  kill  ashuc1
+  104  docker  run  -d  --name  ashuc22 alpine ping 8.8.8.8
+  106  docker  exec  ashuc22  cal 
+  107  docker  exec  ashuc22  ping  fb.com 
+  109  docker  exec  ashuc22  bash
+  110  docker  exec  ashuc22  sh 
+  111  docker  exec  -i -t   ashuc22  sh 
+  113  docker  exec  -d  ashuc22 ping fb.com 
+  114  docker  exec  ashuc22  ps -e
+  124  docker  run  -it  --name  ashuc3  oraclelinux   
+  125  docker  run  -it  --name  ashuc4  alpine  
+  166  docker  build  -t   alpine:ashutoshh   .  
+  172  docker  inspect  alpine:ashutoshh  |   less
+  173  docker  run  --rm   alpine:ashutoshh  
+  199  docker  build  -t  python:ashu   .  
+  200  docker  run  -it  --rm  python:ashu  
+  208  git clone https://github.com/redashu/oracle11may2020
+  235  vim  ashu.dockerfile
+  240  vim  ashu.dockerfile 
+  247  vim ashu.dockerfile 
+  249  cat  ashu.dockerfile 
+  250  vim  ashu.dockerfile 
+  252  cat  ashu.dockerfile 
+  255  docker  build  -t   httpd:ashu  .  
+  257  docker  build  -t   httpd:ashu  -f  ashu.dockerfile    .  
+  259  docker  images   |   grep -i ashu
+  263  cat  ashu.dockerfile 
+  267  cat  ashu.dockerfile 
+  274  docker  images  |   grep -i ashu
+  275  docker  run  -itd  --name ashuweb1 -p  1122:80  httpd:ashu  
+  276  docker  run  -itd  --name ashuweb1 -p  9009:80  httpd:ashu  
+  277  docker  run  -itd  --name ashuweb444 -p  9009:80  httpd:ashu  
+  279  cat  ashu.dockerfile 
+  280  docker  exec -it  ashuweb444 bash
+  285  vim ashu.dockerfile 
+  287  docker kill  ashuweb444
+  288  docker rm  ashuweb444
+  290  vim  ashu.dockerfile 
+  292  docker build  -t  httpd:ashu -f  ashu.dockerfile   .
+  293  docker  run  -itd  --name ashuweb444 -p  9009:80  httpd:ashu  
+  295  cat  ashu.dockerfile 
+  299  docker  images   |  grep -i ashu
+  300  docker  tag   ec9dbe5ba2a6    dockerashu/httpd:oraclelinux
+  301  docker  images   |  grep -i ashu
+  303  docker  push   dockerashu/httpd:oraclelinux
+  306  docker  images  |  grep -i ashu
+  340  docker build -t  ashu:python3  . 
+  341  docker  images   |   grep -i  ashu
+  350  docker  images   |   grep -i ashu
+  358  docker build -t  ashu:testv1  . 
+  359  docker run -it --rm  ashu:testv1  
+  360  docker run -it --rm  ashu:testv1   sh 
+  361  docker run -it --rm  ashu:testv1  cal
+  365  docker build -t  ashu:testv1  . 
+  366  docker run -it --rm  ashu:testv1  
+  367  docker run -it --rm  ashu:testv1  cal 
+  369  docker build -t  ashu:testv1  . 
+  370  docker run -it --rm  ashu:testv1  
+  371  docker run -it --rm  ashu:testv1  cal
+  381  docker run -it --rm  ashu:testv1  cal 
+  404  git clone https://github.com/redashu/oraclemay2020test
+  419  docker  build  -t  ashu:testv2  . 
+  420  docker  build  --build-arg x=httpd   -t  ashu:testv2     . 
+  423  docker  run  -it --rm ashu:testv2 env 
+  426  docker  build  --build-arg x=httpd   -t  ashu:testv2     . 
+  427  docker  run  -it --rm ashu:testv2 env 
+  430  docker  run  -it --rm ashu:testv2 env 
+  435  docker  build  --build-arg x=httpd   -t  ashu:testv2     . 
+  437  docker  build  --build-arg x=httpd   -t  ashu:testv2     . 
+  440  docker  build  --build-arg x=httpd   -t  ashu:testv2     . 
+  441  docker  run  -it --rm ashu:testv2 env 
+  466  docker build -t  ashu:testv4 .
+  467  docker run -it --rm   ashu:testv4 bash 
+  494  docker  build  -t  ashu:httpdv1  . 
+  496  docker  images   |  grep -i ashu
+  497  docker  run -d --name ashumc1  -p 9090:80  ashu:httpdv1 
+  498  docker ps  |  grep -i ashu
+  499  docker exec  -it  ashumc1  env 
+  500  docker  run -d --name ashumc2  -p 9087:80  -e  x=web2     ashu:httpdv1 
+  501  docker exec  -it  ashumc2  env 
+  545  docker images   |  grep -i ashu
+  550  history    |   grep -i ashu  
+  551  history    |   grep -i ashu   >containercommands.txt

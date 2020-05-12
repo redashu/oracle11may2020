@@ -1,0 +1,224 @@
+    9  docker  version 
+   12  docker  version 
+   14  docker  version
+   18  docker  version 
+   19  docker   images 
+   21  docker  search    java
+   22  docker  search   mysql 
+   23  docker  search   ashutoshh
+   24  docker  pull  java
+   25  docker  images
+   26  docker  pull mysql 
+   28  docker  images
+   30  docker  pull mysql 
+   31  docker  pull  oraclelinux 
+   32  docker  images
+   33  docker  pull  alpine  
+   34  docker  images
+   36  docker  images
+   37  docker  run   alpine     date 
+   38  docker   ps
+   39  docker  ps   -a
+   41  docker  ps  -a
+   43  docker  ps
+   44  docker  run  alpine  ping  fb.com  
+   46  docker  ps
+   47  docker  ps  -a
+   49  docker  ps
+   52  docker  ps
+   53  docker  ps -a 
+   55  docker  kill  $(docker ps -q)
+   56  docker  rm   $(docker ps -qa)
+   57  docker  ps  -a
+   58  docker  run  --name  ashuc1  alpine  ping  google.com 
+   59  docker  ps
+   61  docker  run  --name  ashuc1  alpine  ping  google.com 
+   62  docker  rm   ashuc1  
+   63  docker  run  --name  ashuc1  -d   alpine  ping  google.com  
+   64  docker  ps
+   65  docker  ps 
+   68  docker  ps
+   69  docker  logs  sandeep_02
+   70  docker  logs  ashuc1  
+   72  docker  logs -f   ashuc1  
+   74  docker  ps
+   75  docker  logs   747a7343f065 
+   77  docker  ps
+   79  docker  ps
+   80  docker   stop   ashuc1  
+   81  docker  ps 
+   83  docker  start  ashuc1 
+   84  docker  ps
+   86  docker  ps
+   87  docker  kill  ashuc1
+   88  docker  stop  1d746c12f973 
+   90  docker  ps
+   91  docker  ps 
+   92  docker  ps   -q
+   93  docker  kill    $(docker  ps   -q)
+   94  docker  start   $(docker  ps   -q)
+   95  docker  start   $(docker  ps   -aq)
+   96  docker  ps
+   98  docker  kill    $(docker  ps   -q)
+   99  docker  rm     $(docker  ps   -q)
+  100  docker  rm     $(docker  ps   -aq)
+  102  docker  ps -a
+  103  docker  ps
+  104  docker  run  -d  --name  ashuc22 alpine ping 8.8.8.8
+  105  docker  ps
+  106  docker  exec  ashuc22  cal 
+  107  docker  exec  ashuc22  ping  fb.com 
+  109  docker  exec  ashuc22  bash
+  110  docker  exec  ashuc22  sh 
+  111  docker  exec  -i -t   ashuc22  sh 
+  113  docker  exec  -d  ashuc22 ping fb.com 
+  114  docker  exec  ashuc22  ps -e
+  116  docker  ps
+  118  docker  run  -it  alpine  sh  
+  119  docker  ps
+  120  docker  ps  |  less
+  122  docker  run  -it --name  ok1   alpine  sh  
+  124  docker  run  -it  --name  ashuc3  oraclelinux   
+  125  docker  run  -it  --name  ashuc4  alpine  
+  127  docker  run  -it  python  
+  129  docker  inspect  alpine  
+  130  docker  inspect  alpine    |   less
+  131  docker  inspect  oraclelinux     |   less
+  132  docker  inspect  python       |   less
+  134  docker  inspect  alpine    |   less
+  136  docker  inspect  alpine    |   less
+  138  docker  ps
+  139  docker  rm  $(docker  ps  -aq)  --force
+  140  docker  images
+  141  docker  ps  -a
+  159  vim  Dockerfile 
+  161  cat  Dockerfile 
+  163  docker  images
+  164  docker  run   -it  48a0b88bcf77   bash 
+  166  docker  build  -t   alpine:ashutoshh   .  
+  167  docker  images
+  171  docker  images
+  172  docker  inspect  alpine:ashutoshh  |   less
+  173  docker  run  --rm   alpine:ashutoshh  
+  174  docker  ps
+  190  vim  dockerfile 
+  192  vim  dockerfile 
+  194  cat  dockerfile 
+  197  cat  dockerfile 
+  199  docker  build  -t  python:ashu   .  
+  200  docker  run  -it  --rm  python:ashu  
+  214  git commit  -m  "day1 docker file "
+  218  docker  images
+  219  docker  images  | less
+  235  vim  ashu.dockerfile
+  240  vim  ashu.dockerfile 
+  247  vim ashu.dockerfile 
+  249  cat  ashu.dockerfile 
+  250  vim  ashu.dockerfile 
+  252  cat  ashu.dockerfile 
+  255  docker  build  -t   httpd:ashu  .  
+  257  docker  build  -t   httpd:ashu  -f  ashu.dockerfile    .  
+  259  docker  images   |   grep -i ashu
+  261  docker  images   |   grep -i raja
+  263  cat  ashu.dockerfile 
+  265  docker  images   |   grep -i raja
+  267  cat  ashu.dockerfile 
+  268  docker  images  |  grep -i http
+  269  docker  images  |  grep -i swe
+  272  docker  images  |  grep -i http
+  274  docker  images  |   grep -i ashu
+  275  docker  run  -itd  --name ashuweb1 -p  1122:80  httpd:ashu  
+  276  docker  run  -itd  --name ashuweb1 -p  9009:80  httpd:ashu  
+  277  docker  run  -itd  --name ashuweb444 -p  9009:80  httpd:ashu  
+  278  docker  ps
+  279  cat  ashu.dockerfile 
+  280  docker  exec -it  ashuweb444 bash
+  282  docker  ps   |   grep -i anshu
+  283  docker  ps   |   grep -i ans
+  285  vim ashu.dockerfile 
+  287  docker kill  ashuweb444
+  288  docker rm  ashuweb444
+  290  vim  ashu.dockerfile 
+  292  docker build  -t  httpd:ashu -f  ashu.dockerfile   .
+  293  docker  run  -itd  --name ashuweb444 -p  9009:80  httpd:ashu  
+  295  cat  ashu.dockerfile 
+  297  docker  ps   |   grep -i aji
+  299  docker  images   |  grep -i ashu
+  300  docker  tag   ec9dbe5ba2a6    dockerashu/httpd:oraclelinux
+  301  docker  images   |  grep -i ashu
+  302  docker  login  
+  303  docker  push   dockerashu/httpd:oraclelinux
+  304  docker logout
+  306  docker  images  |  grep -i ashu
+  307  docker  images  |  grep -i  ajj
+  308  docker  images  |  grep -i  ajita
+  330  docker  images  |   grep -i pyt
+  334  vim  dockerfile
+  336  docker run -it  --rm  centosh 
+  337  docker run -it  --rm  centos
+  339  vim dockerfile 
+  340  docker build -t  ashu:python3  . 
+  341  docker  images   |   grep -i  ashu
+  342  docker  info
+  344  docker rm  $(docker ps -aq)
+  345  docker  ps  -a
+  346  docker  run -d alpine  ping fb.com 
+  347  docker  run  -it alpine ping google.com 
+  348  docker  ps  -a
+  349  docker  ps  -f  status=exited
+  350  docker  rmi  $(docker  images -q)  --force
+  351  docker  images
+  364  docker  search  httpd 
+  365  docker  search  nginx  
+  375  vim  Dockerfile
+  377  cat  Dockerfile 
+  378  vim  Dockerfile 
+  380  vim  Dockerfile 
+  384  cat Dockerfile 
+  386  vim   .dockerignore  
+  389  cat  .dockerignore 
+  391  cat  .dockerignore 
+  393  vim .dockerignore 
+  395  docker  build  -t  nginx:ashu  .  
+  396  docker  images
+  400  docker  images
+  402  cat  Dockerfile 
+  403  docker  history  nginx:ashu 
+  404  docker  images
+  405  docker  history  nginx:ashu 
+  406  docker  build  -t  nginx:ashu  .  
+  407  docker  build  -t  nginx:ashu --no-cache   .  
+  409  docker  run -itd  --name ashucday2 -p 9008:80  nginx:ashu 
+  410  docker  ps
+  413  docker  ps
+  417  docker  pull tomcat 
+  418  docker run -d  --name ok1  tomcat 
+  419  docker  exec -it ok1 bash 
+  444  vim  Dockerfile
+  446  cat  Dockerfile 
+  447  docker  ps
+  449  vim  .dockerignore
+  451  cat  .dockerignore 
+  453  cat  Dockerfile 
+  455  docker  build  -t  tomcat:ashu . 
+  456  docker  images   |  grep -i ashu
+  458  cat  Dockerfile 
+  459  docker  run  -itd --name ashujava1 -p 9900:8080  tomcat:ashu 
+  460  docker  ps   |   grep -i ashu
+  462  cat  Dockerfile 
+  464  cat  Dockerfile 
+  465  docker  run  --name  ok11 -d  -p 9900:8080  tomcat:ashu
+  466  docker  ps  -a   |   grep -i  ok11
+  469  cat  Dockerfile 
+  498  vim  Dockerfile
+  501  vim Dockerfile 
+  505  vim Dockerfile 
+  509  cat  Dockerfile 
+  511  docker build  -t  customtomcat:ashuv1  . 
+  513  docker  images   |   grep -i ashu
+  514  cat  Dockerfile 
+  515  docker images   |  grep -i java
+  516  docker  images   |   grep -i ashu
+  517  docker  run -itd --name ashujc11 -p 2200:8080 c0aa98ad1cf7
+  518  docker  ps   |  grep -i ashu
+  524  history  |  grep -i docker  >day12.txt 

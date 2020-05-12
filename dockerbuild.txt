@@ -1,0 +1,19 @@
+  166  docker  build  -t   alpine:ashutoshh   .  
+  199  docker  build  -t  python:ashu   .  
+  255  docker  build  -t   httpd:ashu  .  
+  257  docker  build  -t   httpd:ashu  -f  ashu.dockerfile    .  
+  292  docker build  -t  httpd:ashu -f  ashu.dockerfile   .
+  340  docker build -t  ashu:python3  . 
+  358  docker build -t  ashu:testv1  . 
+  365  docker build -t  ashu:testv1  . 
+  369  docker build -t  ashu:testv1  . 
+  419  docker  build  -t  ashu:testv2  . 
+  420  docker  build  --build-arg x=httpd   -t  ashu:testv2     . 
+  426  docker  build  --build-arg x=httpd   -t  ashu:testv2     . 
+  435  docker  build  --build-arg x=httpd   -t  ashu:testv2     . 
+  437  docker  build  --build-arg x=httpd   -t  ashu:testv2     . 
+  440  docker  build  --build-arg x=httpd   -t  ashu:testv2     . 
+  466  docker build -t  ashu:testv4 .
+  494  docker  build  -t  ashu:httpdv1  . 
+  548  history    |   grep -i build 
+  549  history    |   grep -i build   >dockerbuild.txt
