@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  db:
+    image: mysql  #  image  name 
+    command: --default-authentication-plugin=mysql_native_password  # way of loading  password
+    restart: always  # restart policy 
+    environment:
+      MYSQL_ROOT_PASSWORD: ashu123
+  adminer:
+    image: adminer
+    restart: always
+    depends_on:
+     - db    #  this web app is depends on db serivce
+    ports:
+      - 8999:8080   #  adminer  has 8080  as default port 

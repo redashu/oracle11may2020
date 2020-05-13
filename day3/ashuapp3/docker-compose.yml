@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+ ashuwebapp:
+  image: nginx
+  container_name: ashuwebc11
+  ports:
+   - "9999:80"
+  networks:
+   - ashuwebbr   # we are using  custom network 
+  volumes:
+   - ashuvolx:/var/log/nginx/   # using  docker volume created below like docker run -v ashu:/data 
+   - ./webapp:/usr/share/nginx/html/  #  now mount location folder as volume 
+  
+networks:
+ ashuwebbr:   #  this will create  a new  network   like docker network create 
+
+volumes:     #  here  a volume will be created like docker volume create 
+ ashuvolx:

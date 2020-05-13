@@ -1,0 +1,134 @@
+  669  docker-compose
+  670  sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
+  671  sudo chmod +x  /usr/bin/docker-compose 
+  672  docker-compose  -v
+  681  vim  docker-compose.yml  
+  686  cat  docker-compose.yml 
+  687  docker-compose   up 
+  688  vim docker-compose.yml 
+  689  cat  docker-compose.yml 
+  691  docker-compose  up 
+  694  cat  docker-compose.yml 
+  696  docker-compose  ps
+  697  docker-compose  images
+  701  docker-compose  ps
+  704  docker-compose   ps
+  708  docker-compose  ps
+  711  docker-compose   ps
+  712  docker-compose   images
+  714  docker-compose  start
+  715  docker-compose  ps
+  716  docker-compose  start
+  717  docker-compose  ps
+  720  docker-compose   ps
+  721  docker-compose   logs
+  723  docker-compose  stop
+  724  docker-compose  down 
+  727  docker-compose up  -d
+  728  docker-compose ps
+  729  docker-compose images
+  730  docker-compose kill
+  731  docker-compose rm 
+  732  docker-compose down
+  735  cat  docker-compose.yml 
+  737  vim  docker-compose.yml 
+  738  cat  docker-compose.yml 
+  739  docker-compose up  -d
+  740  docker-compose ps
+  741  docker-compose logs
+  743  docker-compose ps  
+  744  docker-compose logs   ashuapp11 
+  745  docker-compose logs   ashuapp22
+  746  docker-compose  ps
+  747  docker-compose  kill 
+  748  docker-compose  start ashuapp11
+  749  docker-compose  ps
+  750  docker-compose  rm  ashuapp11
+  751  docker-compose  down
+  785  docker-compose  up  -d
+  787  docker-compose -f  ashu.yml   up  -d
+  788  docker-compose ps
+  789  docker-compose -f ashu.yml  ps
+  793  docker-compose -f ashu.yml down
+  796  docker-compose -f ashu.yml up  -d
+  798  docker-compose -f ashu.yml up  -d
+  799  docker-compose -f ashu.yml ps
+  804  docker-compose 
+  808  docker-compose -f ashu.yml down
+  809  docker-compose -f ashu.yml -e x=web2  up 
+  816  docker-compose -f ashu.yml  up 
+  817  docker-compose -f ashu.yml  up -d
+  818  docker-compose -f ashu.yml  ps
+  839  docker-compose -f ashu.yml ps
+  840  docker-compose -f ashu.yml down
+  845  vim  docker-compose.yml 
+  855  vim  docker-compose.yml 
+  857  cat  docker-compose.yml 
+  860  cat  docker-compose.yml 
+  861  docker-compose up -d
+  862  docker-compose ps
+  863  docker-compose images
+  865  cat  docker-compose.yml 
+  868  cat  docker-compose.yml 
+  871  cat  docker-compose.yml 
+  875  docker-compose ps -d
+  876  docker-compose up  -d
+  877  docker-compose ps
+  881  docker-compose down
+  894  docker-compose  down
+  900  vim  docker-compose.yml 
+  901  view   docker-compose.yml 
+  902  cat  docker-compose.yml 
+  903  vim docker-compose.yml 
+  905  cat  docker-compose.yml 
+  906  docker-compose up  -d
+  908  vim docker-compose.yml 
+  909  docker-compose up  -d
+  910  vim docker-compose.yml 
+  911  docker-compose up  -d
+  913  vim docker-compose.yml 
+  914  docker-compose up  -d
+  915  docker-compose ps
+  916  cat  docker-compose.yml 
+  918  docker-compose down
+  920  docker-compose down
+  926  vim docker-compose.yml 
+  928  cat  docker-compose.yml 
+  930  docker-compose up  -d
+  931  docker-compose  ps
+  933  cat  docker-compose.yml 
+  934  docker-compose  ps
+  935  docker-compose logs ashudb
+  936  docker-compose logs ashuweb
+  938  docker-compose  down
+  940  vim docker-compose.yml 
+  941  docker-compose  up  -d
+  942  docker-compose  ps
+  943  docker-compose logs  ashuweb
+  944  docker-compose logs  ashudb
+  945  docker-compose logs  ashuweb
+  946  docker-compose logs  ashudb
+  947  docker-compose logs  ashuweb
+  949  vim docker-compose.yml 
+  953  cat  ashuwebdb4/docker-compose.yml 
+  957  vim docker-compose.yml 
+  958  docker-compose  down 
+  959  docker-compose  up  -d
+  960  docker-compose  ps
+  962  docker-compose  logs  ashudb 
+  963  docker-compose  logs  ashuweb
+  966  cat  docker-compose.yml o
+  978  vim  docker-compose.yml 
+  979  docker-compose up  -d
+  981  cat  docker-compose.yml 
+  983  cat  docker-compose.yml 
+  985  docker-compose down
+  986  docker-compose up  -d
+  987  docker-compose down
+  988  vim docker-compose.yml 
+  989  cat docker-compose.yml 
+  990  docker-compose up --build    -d
+  991  docker-compose ps
+  996  cat  docker-compose.yml 
+ 1003  history    |   grep -i docker-com
+ 1004  history    |   grep -i docker-com  >oracle11may2020/compose.txt 

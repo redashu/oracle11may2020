@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+ ashuwebapp:
+  image: dockerashu/oracle:may2020  #  docker image
+  container_name: ashuc33  # name of container to be created 
+  environment:  # use for environment variable
+   x: web1       #  i am replacing  x with web2 --same docker  run -e x=web2 
+  ports:   #  for assiging port same as  docker  run  -p  1112:80 
+   - "9992:80"   
+
+ ashuwebapp11:
+  image: dockerashu/oracle:may2020  #  docker image
+  container_name: ashu443  # name of container to be created 
+  environment:  # use for environment variable
+   x: web2       #  i am replacing  x with web2 --same docker  run -e x=web2 
+  ports:   #  for assiging port same as  docker  run  -p  1112:80 
+   - "9972:80"   

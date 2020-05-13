@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+ ashudb:
+  image: mysql
+  command: --default-authentication-plugin=mysql_native_password
+  restart: always  # restart policy of db container
+  volumes:
+   - ashudb:/var/lib/mysql/   #  will store db persistently
+  environment:
+   MYSQL_ROOT_PASSWORD: ashu123   #  root password of database
+   MYSQL_USER: ashu  #  it will create  a new user
+   MYSQL_PASSWORD: ashupass123  #  password of ashu user in db 
+
+ ashuweb:
+  image: wordpress  # offical image on docker hub 
+  depends_on:
+   - ashudb   #  web server will not be up utill db is not up 
+  ports:
+   - "9090:80"
+  environment:
+   WORDPRESS_DB_HOST: ashudb:3306
+   WORDPRESS_DB_USER: ashu
+   WORDPRESS_DB_PASSWORD: ashupass123
+   WORDPRESS_DB_NAME: wordpress
+  restart: always             #  restart policy 
+
+volumes:
+ ashudb:    #  creating  db vol 

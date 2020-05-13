@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+ ashuapp11:   #  this is name of my first app
+  container_name: ashuappc1   #  name of my  container
+  image: alpine  #  image  from  docker  hub 
+  command: ping fb.com   #  parent  process  replacement of  CMD  in Dockerfile
+
+ ashuapp22:   #  this is name of my first app
+  container_name: ashuappc2   #  name of my  container
+  image: alpine  #  image  from  docker  hub 
+  command: ping google.com   #  parent  process  replacement of  CMD  in Dockerfile
+ 

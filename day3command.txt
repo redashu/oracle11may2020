@@ -1,0 +1,300 @@
+  710  ls
+  711  docker-compose   ps
+  712  docker-compose   images
+  713  ls
+  714  docker-compose  start
+  715  docker-compose  ps
+  716  docker-compose  start
+  717  docker-compose  ps
+  718  docker  ps  |   grep -i ashu
+  719  ls
+  720  docker-compose   ps
+  721  docker-compose   logs
+  722  history 
+  723  docker-compose  stop
+  724  docker-compose  down 
+  725  history 
+  726  ls
+  727  docker-compose up  -d
+  728  docker-compose ps
+  729  docker-compose images
+  730  docker-compose kill
+  731  docker-compose rm 
+  732  docker-compose down
+  733  history 
+  734  ls
+  735  cat  docker-compose.yml 
+  736  ls
+  737  vim  docker-compose.yml 
+  738  cat  docker-compose.yml 
+  739  docker-compose up  -d
+  740  docker-compose ps
+  741  docker-compose logs
+  742  ls
+  743  docker-compose ps  
+  744  docker-compose logs   ashuapp11 
+  745  docker-compose logs   ashuapp22
+  746  docker-compose  ps
+  747  docker-compose  kill 
+  748  docker-compose  start ashuapp11
+  749  docker-compose  ps
+  750  docker-compose  rm  ashuapp11
+  751  docker-compose  down
+  752  history 
+  753  cd  ..
+  754  ls
+  755  mkdir  ashuapp2
+  756  ls
+  757  cd  ashuapp2/
+  758  ls
+  759  cd ...
+  760  cd  ..
+  761  ls
+  762  cd
+  763  cd  day2
+  764  ls
+  765  cd multiapp/
+  766  ls
+  767  cat  starthttpd.sh 
+  768  ls
+  769  sudo chmod +x /usr/bin/docker
+  770  docker build -t  dockerashu/oracle:may2020 .
+  771  docker  login 
+  772  docker push  dockerashu/oracle:may2020 
+  773  docker logout
+  774  cd
+  775  ls
+  776  cd day3
+  777  ls
+  778  cd  ashuapp2
+  779  ls
+  780  vim  ashu.yml
+  781  ls
+  782  cat  ashu.yml 
+  783  ls
+  784  cat  ashu.yml 
+  785  docker-compose  up  -d
+  786  ls
+  787  docker-compose -f  ashu.yml   up  -d
+  788  docker-compose ps
+  789  docker-compose -f ashu.yml  ps
+  790  ls
+  791  history 
+  792  ls
+  793  docker-compose -f ashu.yml down
+  794  ls
+  795  vim ashu.yml 
+  796  docker-compose -f ashu.yml up  -d
+  797  vim ashu.yml 
+  798  docker-compose -f ashu.yml up  -d
+  799  docker-compose -f ashu.yml ps
+  800  ls
+  801  cat ashu.yml 
+  802  history 
+  803  cat ashu.yml 
+  804  docker-compose 
+  805  history 
+  806  ls
+  807  cat  ashu.yml 
+  808  docker-compose -f ashu.yml down
+  809  docker-compose -f ashu.yml -e x=web2  up 
+  810  ls
+  811  cat  ashu.yml 
+  812  history 
+  813  ls
+  814  cat  ashu.yml 
+  815  vim ashu.yml 
+  816  docker-compose -f ashu.yml  up 
+  817  docker-compose -f ashu.yml  up -d
+  818  docker-compose -f ashu.yml  ps
+  819  history 
+  820  cat  ashu.yml 
+  821  history 
+  822  cat ashu.yml 
+  823  who
+  824  clear
+  825  ls
+  826  cd  day3
+  827  ls
+  828  mkdir  ashuapp3
+  829  cd  ashuapp3
+  830  ls
+  831  cd ..
+  832  ls
+  833  cd ..
+  834  ls
+  835  cd day3
+  836  ls
+  837  cd ashuapp2
+  838  ls
+  839  docker-compose -f ashu.yml ps
+  840  docker-compose -f ashu.yml down
+  841  cd ..
+  842  ls
+  843  cd ashuapp3
+  844  ls
+  845  vim  docker-compose.yml 
+  846  ls
+  847  git clone  https://github.com/mdn/beginner-html-site-styled.git
+  848  ls
+  849  mv  beginner-html-site-styled/  webapp
+  850  ls
+  851  history 
+  852  ls
+  853  his
+  854  history 
+  855  vim  docker-compose.yml 
+  856  ls
+  857  cat  docker-compose.yml 
+  858  history 
+  859  ls
+  860  cat  docker-compose.yml 
+  861  docker-compose up -d
+  862  docker-compose ps
+  863  docker-compose images
+  864  ls
+  865  cat  docker-compose.yml 
+  866  docker  network  ls
+  867  ls
+  868  cat  docker-compose.yml 
+  869  sudo -i
+  870  ls
+  871  cat  docker-compose.yml 
+  872  docker  network  ls
+  873  docker rm  $(docker ps -aq) --force  ;  docker network  rm  $(docker network ls -q)
+  874  ls
+  875  docker-compose ps -d
+  876  docker-compose up  -d
+  877  docker-compose ps
+  878  history 
+  879  ls
+  880  cat  
+  881  docker-compose down
+  882  docker  ps   |  grep -i  san
+  883  history 
+  884  ls
+  885  sudo -i
+  886  ls
+  887  ls  webapp/
+  888  history 
+  889  history   |  grep -i git 
+  890  ls
+  891  ls  webapp/
+  892  sudo -i
+  893  ls
+  894  docker-compose  down
+  895  cd  ..
+  896  ls
+  897  mkdir ashuwebdb4
+  898  cd  ashuwebdb4/
+  899  ls
+  900  vim  docker-compose.yml 
+  901  view   docker-compose.yml 
+  902  cat  docker-compose.yml 
+  903  vim docker-compose.yml 
+  904  ls
+  905  cat  docker-compose.yml 
+  906  docker-compose up  -d
+  907  ls
+  908  vim docker-compose.yml 
+  909  docker-compose up  -d
+  910  vim docker-compose.yml 
+  911  docker-compose up  -d
+  912  ls
+  913  vim docker-compose.yml 
+  914  docker-compose up  -d
+  915  docker-compose ps
+  916  cat  docker-compose.yml 
+  917  ls
+  918  docker-compose down
+  919  ls
+  920  docker-compose down
+  921  cd ..
+  922  ls
+  923  mkdir  finalcomposeashu
+  924  cd finalcomposeashu/
+  925  ls
+  926  vim docker-compose.yml 
+  927  ls
+  928  cat  docker-compose.yml 
+  929  ls
+  930  docker-compose up  -d
+  931  docker-compose  ps
+  932  history 
+  933  cat  docker-compose.yml 
+  934  docker-compose  ps
+  935  docker-compose logs ashudb
+  936  docker-compose logs ashuweb
+  937  ls
+  938  docker-compose  down
+  939  ls
+  940  vim docker-compose.yml 
+  941  docker-compose  up  -d
+  942  docker-compose  ps
+  943  docker-compose logs  ashuweb
+  944  docker-compose logs  ashudb
+  945  docker-compose logs  ashuweb
+  946  docker-compose logs  ashudb
+  947  docker-compose logs  ashuweb
+  948  ls
+  949  vim docker-compose.yml 
+  950  ls
+  951  cd ..
+  952  ls
+  953  cat  ashuwebdb4/docker-compose.yml 
+  954  ls
+  955  cd  finalcomposeashu/
+  956  ls
+  957  vim docker-compose.yml 
+  958  docker-compose  down 
+  959  docker-compose  up  -d
+  960  docker-compose  ps
+  961  history 
+  962  docker-compose  logs  ashudb 
+  963  docker-compose  logs  ashuweb
+  964  history 
+  965  ls
+  966  cat  docker-compose.yml o
+  967  sudo -i
+  968  ls
+  969  cd ..
+  970  ls
+  971  cd ..
+  972  l;s
+  973  ls
+  974  cd  day2
+  975  ls
+  976  cd  multiapp/
+  977  ls
+  978  vim  docker-compose.yml 
+  979  docker-compose up  -d
+  980  ls
+  981  cat  docker-compose.yml 
+  982  history 
+  983  cat  docker-compose.yml 
+  984  ls
+  985  docker-compose down
+  986  docker-compose up  -d
+  987  docker-compose down
+  988  vim docker-compose.yml 
+  989  cat docker-compose.yml 
+  990  docker-compose up --build    -d
+  991  docker-compose ps
+  992  history 
+  993  ls
+  994  cat  Dockerfile 
+  995  ls
+  996  cat  docker-compose.yml 
+  997  ls
+  998  history 
+  999  exit
+ 1000  ls
+ 1001  cp  -rvf  day3/  oracle11may2020/
+ 1002  ls
+ 1003  history    |   grep -i docker-com
+ 1004  history    |   grep -i docker-com  >oracle11may2020/compose.txt 
+ 1005  ls
+ 1006  history   | grep -i portain
+ 1007  history 
+ 1008  history   |  tail  -300
+ 1009  history   |  tail  -300  >oracle11may2020/day3command.txt
