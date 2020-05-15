@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+ name: ashurc
+ labels:
+  x: helloashu
+
+spec:
+ replicas: 2   #  no of pods you want to create and maintain always
+ template:
+  metadata:   #  same as pod 
+   name: mypodashu
+   labels:
+    x: helloashu
+  spec:    
+   containers:
+    - name: ashuc11
+      image: nginx
+      ports:
+       - containerPort: 80 

@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null  # avoid 
+  labels:   # this is not required of  service as of now 
+    app: ashus1
+  name: ashus1   #  name of service
+spec:
+  ports:
+  - name: mysvc
+    port: 80   #  compulsory field   it is port number of service it self 
+    protocol: TCP
+    targetPort: 80   # this must be same as pod port number 
+  selector:    #  will select  label of pods
+    run: ashupod5   #  label  of  pod 
+  type: NodePort
+status:
+  loadBalancer: {}

@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: pod6
+  name: pod6
+  namespace: ashutoshh 
+spec:
+  volumes:   #  creating  volumes
+   - name: ashuvol1
+     emptyDir: {}    #  creating  temperary directory 
+  containers:
+  - image: alpine
+    name: pod6
+    volumeMounts:
+     - name: ashuvol1   #  this volume must be present 
+       mountPath:  /mnt/data/   # inside pod this volume will be mount 
+    command: ["/bin/sh","-c","while  true; do date  >>/mnt/data/time.txt ; sleep 3; done"]  # replace entrypoint
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}

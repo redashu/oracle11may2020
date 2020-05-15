@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: ashupod5
+  name: ashupod5
+spec:
+  containers:
+  - image: alpine
+    name: ashupod5
+    command: ["/bin/sh","-c","ping fb.com"]  #  is the replacement or  Entrypoint  data  in dockerfile
+    env: 
+     - name: x   # this env var will be created in the pod
+       valueFrom:   # when i want to take data outside this like configmap 
+        configMapKeyRef: 
+         name: ashucm2   #  this will be the name of configmap we created 
+         key: ip     #  key of configmap 
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}

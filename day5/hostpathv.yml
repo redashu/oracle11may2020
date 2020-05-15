@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: pod6
+  name: pod6
+  namespace: ashutoshh 
+spec:
+  nodeName: ip-172-31-34-138.ec2.internal  #  hostname of ip of workernode
+  volumes:   #  creating  volumes
+   - name: ashuvol1
+     hostPath:     #  creating  temperary directory 
+      path: /var/run/docker.sock
+      type: Socket
+  containers:
+  - image: portainer/portainer
+    name: pod6
+    ports:
+     - containerPort: 9000  #  default port of portainer 
+    volumeMounts:
+     - name: ashuvol1   #  this volume must be present 
+       mountPath:  /var/run/docker.sock   # inside pod this volume will be mount 

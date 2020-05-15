@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: azurepod
+  name: azurepod
+spec:
+  imagePullSecrets:
+   - name: ashusec1
+  containers:
+  - image: ashutoshh.azurecr.io/nginx:v1
+    name: azurepod
+    ports:
+    - containerPort: 80
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}

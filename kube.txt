@@ -1,0 +1,340 @@
+  370  kubectl  
+  371  curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+  373  sudo mv  kubectl  /usr/bin/
+  374  sudo chmod +x  /usr/bin/kubectl 
+  376  kubectl version 
+  377  kubectl 
+  379  kubectl 
+  384  kubectl  version   --kubeconfig  admin.conf  
+  385  kubectl  version  --kubeconfig admin.conf 
+  391  kubectl version
+  393  kubectl get  nodes
+  394  kubectl delete  all --all 
+  406  kubectl  get  pods
+  408  kubectl create  -f  ashupod1.yml 
+  409  kubectl get pods
+  412  kubectl get pods
+  419  kubectl get  pods
+  421  kubectl get  nodes
+  422  kubectl get  pods  -o  wide 
+  424  kubectl get  pods  -o  wide 
+  425  kubectl get  nodes
+  427  kubectl get  nodes
+  428  kubectl get  pods ashupod1   -o  wide 
+  430  kubectl  explain  pods 
+  431  kubectl  explain  pods.apiVersion 
+  432  kubectl  explain  pods.kind
+  433  kubectl  explain  pods.spec
+  434  kubectl  explain  pods.spec   |  less
+  435  kubectl  explain  pods.spec.containers   |  less
+  437  kubectl get  po 
+  438  kubectl delete  pods  ashupod1  
+  439  kubectl delete  pods  --all
+  448  kubectl   api-versions 
+  449  kubectl   
+  450  kubectl  version
+  451  kubectl  run  ashupod3 --image=nginx --dry-run -o yaml 
+  453  kubectl  run  ashupod3 --image=nginx --dry-run -o yaml 
+  454  kubectl  run  ashupod3 --image=nginx --dry-run -o yaml   >mynew.yml 
+  457  kubectl create -f mynew.yml 
+  458  kubectl get pods
+  460  kubectl get pods
+  462  kubectl get  po
+  464  kubectl get  po
+  466  kubectl get  po
+  467  kubectl  describe  pods  anshupriyapod2  |  less
+  469  kubectl get po
+  471  kubectl get po
+  472  kubectl version
+  474  kubectl  run  mypod  --image=nginx  --restart Never  --dry-run -o yaml 
+  475  kubectl  run snehpod4  --image=nginx --dry-run  -o yaml 
+  476  kubectl  run snehpod4  --image=nginx --dry-run  -o yaml  >snhepod4.yml
+  481  kubectl delete pods  --all
+  483  kubectl run  ashupod5  --image=nginx  --port 80  --restart Never --dry-run  -o yaml 
+  484  kubectl run  ashupod5  --image=nginx  --port 80  --restart Never --dry-run  -o yaml  >ashuport.yml 
+  486  kubectl run  ashupod5  --image=nginx  --port 80  --restart Never --dry-run  -o yaml  >ashuport.yml 
+  488  kubectl run  ashupod5  --image=nginx  --port 80  --restart Never --dry-run  
+  489  kubectl run  ashupod5  --image=nginx  --port 80  --restart Never 
+  490  kubectl get pods
+  492  kubectl get  po ashupod5 -o wide
+  496  kubectl get  po
+  497  kubectl get po
+  498  kubectl get po ashupod5 
+  499  kubectl get po ashupod5  --show-labels 
+  500  kubectl get po  --show-labels 
+  502  kubectl get  pods ashupod5  --show-labels 
+  503  kubectl  create  service  nodeport  ashus1 --tcp 80 --dry-run -o yaml 
+  504  kubectl  create  service  nodeport  ashus1 --tcp 80 --dry-run -o yaml  >ashus1.yml 
+  507  kubectl get  pods ashupod5  --show-labels 
+  510  kubectl get  service
+  512  kubectl create  -f ashus1.yml 
+  513  kubectl get  service
+  515  kubectl get  service
+  517  kubectl get  service
+  519  history |  grep -i kubectl
+  525  history |  grep -i kubectl
+  528  kubectl get  service
+  529  kubectl get pods
+  530  kubectl get  svc  --all-namespaces 
+  532  kubectl get  svc
+  533  kubectl get  service
+  534  kubectl get po praspod3  --show-labels 
+  535  kubectl get  svc  prass1  --export -o yaml 
+  536  kubectl get po praspod3  --show-labels 
+  537  kubectl get po praspod4  --show-labels 
+  538  kubectl delete all --all 
+  539  kubectl get pods
+  542  kubectl run  ashupod6 --image=dockerashu/oracle:may2020  --port 80 --restart  Never           --dry-run  -o yaml   >ashupod6.yml 
+  548  kubectl create service nodeport  ashusvc6  --tcp 80  --dry-run -o yaml >>ashupod6.yml 
+  555  kubectl create -f  ashupod6.yml 
+  556  kubectl get  po
+  557  kubectl get  svc
+  563  kubectl get svc
+  567  kubectl delete svc --all 
+  568  kubectl get pods
+  569  kubectl get pods ashupod6   --show-labels 
+  575  kubectl get po 
+  576  kubectl get po  ashupod6  
+  577  kubectl get po  ashupod6  --show-labels 
+  578  kubectl get svc
+  579  kubectl get po  ashupod6  --show-labels 
+  580  kubectl expose  pods  ashupod6  --type  NodePort  --port 80  
+  581  kubectl expose  pods  ashupod6  --type  LoadBalancer --port 80  
+  582  kubectl get  svc
+  584  kubectl get  svc
+  586  kubectl get  svc
+  587  kubectl delete svc  --all 
+  588  kubectl expose  pod ashupod6  --type LoadBalancer  --port  80 
+  589  kubectl get svc
+  596  kubectl delete  all --all 
+  598  kubectl create  -f  myrc.yml 
+  599  kubectl get  replicationcontrollers 
+  600  kubectl get  po
+  601  kubectl get  rc
+  603  kubectl get  rc
+  604  kubectl get  po
+  605  kubectl delete pods  ashurc-d92bn
+  606  kubectl get  po
+  608  kubectl get  rc
+  609  kubectl expose  replicationcontroller ashurc --type NodePort  --port 80 
+  611  kubectl get  svc
+  619  kubectl delete all --all 
+  622  kubectl create deployment  ashudep1 --image=dockerashu/oracle:may2020 --dry-run  -o   yaml  >dep1.yml  
+  626  kubectl create  -f dep1.yml 
+  627  kubectl get  deployments.apps 
+  628  kubectl get  deployments
+  629  kubectl get  deployment
+  630  kubectl get  deploy
+  634  kubectl get  deploy
+  635  kubectl get   rs
+  636  kubectl get   replicasets.apps 
+  638  kubectl get po
+  642  kubectl get  deployments.apps 
+  643  kubectl scale deployment  ashudep1  --replicas=5
+  644  kubectl get  deployments.apps 
+  646  kubectl get deploy  ashudep1 
+  647  kubectl get deploy  
+  649  kubectl expose deployment ashudep1 --type LoadBalancer --port 80 
+  650  kubectl get svc
+  652  kubectl scale deployment  ashudep1  --replicas=2
+  655  kubectl describe  deployments.apps  ashudep1 
+  656  kubectl describe  deployments.apps  ashudep1   |  less
+  658  kubectl get svc
+  660  kubectl get po
+  661  kubectl get po   |  grep -i ashu
+  662  kubectl scale deployment  ashudep1 --replicas=5
+  663  kubectl get po   |  grep -i ashu
+  664  kubectl get po
+  666  kubectl get po
+  672  kubectl get po
+  673  kubectl get deploy 
+  674  kubectl get  ns
+  675  kubectl get  namespaces 
+  676  kubectl get pods  --namespace  kube-system 
+  677  kubectl get pods  --namespace  kube-system  -o wide
+  678  kubectl get nodes
+  679  kubectl get pods  --namespace  kube-system  -o wide
+  680  kubectl get pods  --namespace  kube-system  -o wide  |  grep -i kube-proxy
+  681  kubectl get  nodes
+  683  kubectl get  nodes
+  684  kubectl get  pods -n kube-system 
+  685  kubectl get  nodes
+  686  kubectl get  pods -n kube-system  -o wide  |  grep -i etc
+  687  kubectl get  pods -n kube-system  -o wide  |  grep -i apiser
+  688  kubectl get  pods -n kube-system  -o wide  |  grep -i kube-sche
+  690  kubectl get  pods -n  kube-system 
+  691  kubectl get  pods 
+  693  kubectl get  ns
+  694  kubectl create  namespace   ashutoshh
+  695  kubectl get  ns
+  697  kubectl 
+  698  kubectl get ns
+  699  kubectl delete all --all 
+  706  kubectl create  deployment  ashud1  --image=dockerashu/oracle:may2020  --dry-run  -o yaml  >day5dep1.yml 
+  713  kubectl create  -f  day5dep1.yml 
+  714  kubectl get  deploy 
+  715  kubectl get  deploy   -n  ashutoshh 
+  716  kubectl get  rs  -n  ashutoshh 
+  717  kubectl get  po  -n  ashutoshh 
+  718  kubectl get  svc -n  ashutoshh 
+  719  kubectl get  deploy,rs,pod -n  ashutoshh 
+  722  kubectl get ns
+  725  kubectl get deploy -n ashutoshh 
+  726  kubectl expose deployment   ashud1 --type NodePort --port 2233 --target-port 80    -n ashutoshh 
+  728  kubectl get svc  -n ashutoshh 
+  729  kubectl get deploy -n ashutoshh 
+  732  kubectl get svc -n ashutoshh 
+  733  kubectl get svc -n swetha 
+  734  kubectl get svc -o yaml  -n swetha 
+  735  kubectl get deploy   -n swetha 
+  736  kubectl describe  deploy  swed1   -n swetha 
+  737  kubectl get pods  swed1   -n swetha 
+  738  kubectl get pods   -n swetha 
+  739  kubectl describe  deploy  swed1 -o yaml   -n swetha 
+  740  kubectl get   deploy  swed1 -o yaml   -n swetha 
+  742  kubectl get  deploy -n ashutoshh 
+  743  kubectl get  po  -n ashutoshh 
+  745  kubectl  get  ns
+  746  kubectl get  deploy  -n anwwarns 
+  747  kubectl delete deploy anwardep1  -n anwwarns 
+  748  kubectl get  deploy  -n anwwarns 
+  750  kubectl delete all --all  -n  ashutoshh 
+  752  kubectl get pod,svc,rs,deploy -n  ashutoshh 
+  757  kubectl apply  -f  day5dep1.yml  -n  ashutoshh 
+  758  kubectl  get  deploy  -n ashutoshh 
+  759  kubectl  get  pods -n ashutoshh 
+  761  kubectl  get  deploy  -n ashutoshh 
+  762  kubectl expose  deployment  ashud1  --type NodePort  --port 80 -n ashutoshh 
+  763  kubectl get svc -n ashutoshh 
+  765  kubectl get po  --all-namespaces 
+  767  kubectl get deployments.apps --all-namespaces 
+  768  kubectl get svc  --all-namespaces 
+  770  kubectl scale  deployment    ashud1 --replicas=1  -n ashutoshh 
+  771  kubectl get po  -n ashutoshh 
+  772  kubectl exec  -it  ashud1-5d8f969954-64xf9  bash  -n  ashutoshh 
+  774  kubectl scale  deployment    ashud1 --replicas=5  -n ashutoshh 
+  775  kubectl get po  -n ashutoshh 
+  777  kubectl get po  -n ashutoshh 
+  812  kubectl get deploy -n ashutoshh 
+  813  kubectl describe deploy     ashud1   -n ashutoshh 
+  815  kubectl describe deploy     ashud1   -n ashutoshh 
+  816  kubectl set  image  deployment  ashud1 oracle=dockerashu/oracle:may2020v2   -n ashutoshh 
+  817  kubectl describe deploy     ashud1   -n ashutoshh 
+  819  kubectl describe deploy     ashud1   -n ashutoshh 
+  821  kubectl rollout history deployment  ashud1  -n  ashutoshh 
+  822  kubectl describe  deployment  ashud1  -n  ashutoshh 
+  823  kubectl describe  deployment  ashud1  -n  ashutoshh  | less
+  825  kubectl rollout undo deployment ashud1  -n ashutoshh 
+  826  kubectl describe  deployment  ashud1  -n  ashutoshh  | less
+  828  kubectl rollout history deployment  ashud1  -n  ashutoshh  
+  830  kubectl get all --all  -n ashutoshh ashud1
+  831  kubectl get all --all  -n ashutoshh 
+  832  kubectl get all  -n ashutoshh 
+  833  kubectl delete  all  --all   -n ashutoshh 
+  840  kubectl create -f  day5dep1.yml  -n ashutoshh 
+  841  kubectl expose deployment ashud1 --type NodePort  --port 80  -n ashutoshh 
+  842  kubectl get  svc -n ashutoshh 
+  846  kubectl  create   configmap  ashucm1  --from-literal  a=web2 -n ashutoshh 
+  847  kubectl get  cm  -n ashutoshh 
+  849  kubectl  create   configmap  ashucm2  --from-literal ip=fb.com  -n ashutoshh 
+  850  kubectl get  cm  -n ashutoshh 
+  851  kubectl  run  ashupod5  --image=alpine --restart Never --dry-run  -o yaml 
+  852  kubectl  run  ashupod5  --image=alpine --restart Never --dry-run  -o yaml  >pod5.yml  
+  863  kubectl create  -f  pod5.yml  -n ashutoshh 
+  865  kubectl create  -f  pod5.yml  -n ashutoshh 
+  866  kubectl get po -n ashutoshh 
+  869  kubectl create  -f  pod5.yml  -n ashutoshh 
+  870  kubectl replace -f  pod5.yml --force   -n ashutoshh 
+  871  kubectl get po -n ashutoshh 
+  877  kubectl get po -n ashutoshh 
+  878  kubectl get po -n swetha 
+  879  kubectl get po  swepod5 -o yaml                  -n swetha 
+  880  kubectl get po  swepod5 -o yaml                  -n swetha   |  less
+  884  kubectl get  po  -n  ashutoshh 
+  885  kubectl  exec -it  ashupod5  env  -n  ashutoshh 
+  894  kubectl run  azurepod  --image=ashutoshh.azurecr.io/nginx:v1 --port 80 --restart Never    --dry-run  -o yaml 
+  895  kubectl run  azurepod  --image=ashutoshh.azurecr.io/nginx:v1 --port 80 --restart Never    --dry-run  -o yaml   >acr.yml  
+  900  kubectl create -f  acr.yml  -n  ashutoshh 
+  901  kubectl get po -n ashutoshh 
+  902  kubectl describe pod  azurepod -n ashutoshh 
+  904  kubectl get  po -n prasg
+  905  kubectl get  po -n prasadg 
+  906  kubectl describe  po azurepod  -n prasadg 
+  908  kubectl create secret  docker-registry  ashusec1  --docker-username=ashutoshh  --docker-password=Tp0ow8EuqOwp5os38=huUD1QNrqJwbnR   --docker-server   ashutoshh.azurecr.io  -n ashutoshh 
+  909  kubectl get secrets 
+  910  kubectl get secrets   -n  ashutoshh 
+  919  kubectl explain pod.spec    |   grep -i imagepull
+  923  kubectl replace  -f  acr.yml --force  -n ashutoshh 
+  924  kubectl get po -n ashutoshh 
+  938  kubectl get  po 
+  939  kubectl get  po  -n ashutoshh 
+  940  kubectl delete all  --all -n ashutoshh 
+  944  kubectl run  pod6  --image=alpine  --restart Never  --dry-run -o yaml >empdir.yml 
+  950  kubectl apply  -f  empdir.yml  -n ashutoshh 
+  952  kubectl apply  -f  empdir.yml  -n ashutoshh 
+  953  kubectl get  po  -n ashutoshh 
+  955  kubectl get ns
+  957  kubectl get ns
+  958  kubectl get  po  -n ashutoshh 
+  959  kubectl exec  -it  pod6   sh  -n ashutoshh 
+  961  kubectl exec  -it  pod6   sh  -n ashutoshh 
+  965  kubectl get po -n ashutoshh 
+  966  kubectl delete po  pod6  -n ashutoshh 
+  969  kubectl get  nodes
+  972  kubectl explain pods.spec.volumes.hostpath 
+  973  kubectl explain pods.spec.volumes.hostPath
+  974  kubectl explain pods.spec.volumes.hostPath.type
+  977  kubectl get  nodes
+  980  kubectl create -f  hostpathv.yml  -n ashutoshh 
+  982  kubectl create -f  hostpathv.yml  -n ashutoshh 
+  983  kubectl get po -n ashutoshh 
+  984  kubectl get po -n ashutoshh -o wide
+  985  kubectl get nodes
+  987  kubectl get po -n ashutoshh -o wide
+  988  kubectl logs  pod6  -n ashutoshh 
+  990  kubectl get  po -n ashutoshh 
+  991  kubectl expose  po pod6  --type NodePort --port 9000 -n ashutoshh 
+  992  kubectl get  po,svc -n ashutoshh 
+  994  kubectl edit svc  pod6  -n ashutoshh 
+  995  kubectl get  po,svc -n ashutoshh 
+  996  kubectl edit svc  pod6  -n ashutoshh 
+  997  kubectl get  po,svc -n ashutoshh 
+ 1006  kubectl explain pods.spec.volumes.nfs 
+ 1021  kubectl create  -f  nfsvol.yml  -n ashutoshh 
+ 1022  kubectl get po -n ashutoshh 
+ 1023  kubectl expose pods  pod7  --type NodePort --port 80  -n ashutoshh 
+ 1024  kubectl get  svc -n ashutoshh 
+ 1032  kubectl  get po -n ashutoshh
+ 1033  kubectl  api-resources  
+ 1034  kubectl  api-resources    |  less
+ 1035  kubectl  api-resources    |  wc  -l
+ 1036  kubectl config  view
+ 1038  kubectl config  view
+ 1039  kubectl get  ns
+ 1040  kubectl get  serviceaccounts  -n  ashutoshh 
+ 1041  kubectl get  sa -n  ashutoshh 
+ 1042  kubectl get  secrets  -n  ashutoshh 
+ 1043  kubectl describe secrets default-token-q5xjb   -n ashutoshh 
+ 1045  kubectl get  secrets  -n  ashutoshh 
+ 1046  kubectl describe secrets ashusec1  -n ashutoshh 
+ 1048  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
+ 1049  kubectl get ns
+ 1050  kubectl get po  -n  kubernetes-dashboard 
+ 1051  kubectl get sa -n  kubernetes-dashboard  
+ 1053  kubectl get sa -n  kubernetes-dashboard  
+ 1054  kubectl get secrets -n  kubernetes-dashboard  
+ 1055  kubectl get  svc  -n kubernetes-dashboard 
+ 1056  kubectl edit  svc      kubernetes-dashboard              -n  kubernetes-dashboard 
+ 1057  kubectl get  svc  -n kubernetes-dashboard 
+ 1058  kubectl get  sa  -n kubernetes-dashboard 
+ 1059  kubectl get  secrets  -n kubernetes-dashboard 
+ 1060  kubectl describe secrets  kubernetes-dashboard-token-7bssf  -n kubernetes-dashboard 
+ 1063  kubectl create -f  rolebingind.yml  -n kubernetes-dashboard 
+ 1064  kubectl get  deploy         -n ashutoshh 
+ 1065  kubectl get  deploy         
+ 1066  kubectl autoscale deployment swedep1  --help
+ 1067  kubectl autoscale deployment swedep1  --help  |   less
+ 1068  kubectl autoscale deployment swedep1  --min=2 --max=100  --cpu-percent=70 
+ 1073  history   |   grep -i kubectl 
+ 1074  history   |   grep -i kubectl   >oracle11may2020/kubernteehistr.txt
+ 1095  history    |  grep -i kubect  >oracle11may2020/kube.txt

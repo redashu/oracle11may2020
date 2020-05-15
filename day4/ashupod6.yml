@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    x: ashuapp   # label of pod 
+  name: ashupod6
+spec:
+  containers:
+  - image: dockerashu/oracle:may2020   #docker image
+    name: ashupod6  # name of container 
+    ports:
+    - containerPort: 80   # container port same as expose in dockerfile 
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    y: okfine  #  service label is not useful as of now 
+  name: ashusvc6
+spec:
+  ports:
+  - name: myport
+    port: 80  # service port  and this can be different from  pod port 
+    protocol: TCP
+    targetPort: 80  #  same as pod  port 
+  selector:
+   x: ashuapp  # this will match the label of pods 
+  type: NodePort
+status:
+  loadBalancer: {}

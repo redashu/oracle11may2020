@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ashud1
+  name: ashud1    #  name of deployment
+  # namespace: ashutoshh   #  this is my namespace 
+spec:
+  replicas: 4  # always  4  pods will be maintained by replicaset  
+  selector:
+    matchLabels:
+      app: ashud1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ashud1
+    spec:
+      containers:
+      - image: dockerashu/oracle:may2020
+        name: oracle
+        env:   #  local scope 
+         - name: x  #  this is the key of  env var in Dockerfile
+           value: web2   #   value of variable  so that we can have second app running 
+        resources: {}
+status: {}
